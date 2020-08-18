@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core';
-import { IProduct } from './Model/iproduct';
-import { products } from './products';
+import { Injectable } from "@angular/core";
+import { IProduct } from "./Model/iproduct";
+import { products } from "./products";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class ProductService {
-
   shoppingCart: IProduct[] = [];
   products: IProduct[] = [];
 
@@ -22,9 +21,7 @@ export class ProductService {
     return this.shoppingCart;
   }
 
-  addToCart(product: IProduct) : void {
+  addToCart(product: IProduct): void {
     this.shoppingCart.push(product);
   }
 }
-
-
